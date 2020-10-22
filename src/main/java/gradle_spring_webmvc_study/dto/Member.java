@@ -70,4 +70,7 @@ public class Member {
                 name, registerDateTime);
     }
 
+    public boolean matchPassword(String password) {
+    	return this.password.equals(password);
+	}
 }
