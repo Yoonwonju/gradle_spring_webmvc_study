@@ -86,13 +86,13 @@ public class LoginController {
 	
 	@ModelAttribute("subjects")
 	public List<Code> getSubjects(){
-			List<Code> subjects = new ArrayList<Code>();
-			subjects.add(new Code("S1", "윈도우10"));
-			subjects.add(new Code("S2", "리눅스"));
-			subjects.add(new Code("S3", "유닉스"));
-			subjects.add(new Code("S4", "칼리리눅스"));
-			subjects.add(new Code("S5", "우분투"));
-			return subjects;
+		List<Code> subjects = new ArrayList<Code>();
+		subjects.add(new Code("S1", "윈도우10"));
+		subjects.add(new Code("S2", "리눅스"));
+		subjects.add(new Code("S3", "유닉스"));
+		subjects.add(new Code("S4", "칼리리눅스"));
+		subjects.add(new Code("S5", "우분투"));
+		return subjects;
 	}
 	
 //	private List<Code> getSelectedSubject(List<String> strSubject) {

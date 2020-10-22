@@ -29,7 +29,7 @@
 		
 		<p>
 			<label for="tools">■ 주로 사용하는 개발 툴</label><br>
-			<form:radiobuttons path="tool" items="${tools }" delimiter="<br>"/>
+			<form:radiobuttons items="${tools }" path="tool" delimiter="<br>"/>
 		</p>
 		
 		<p>
