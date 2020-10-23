@@ -59,7 +59,10 @@ public class RegisterController {
 //		new RegisterRequestValidator().validate(regReq, errors);
 		if(errors.hasErrors())
 			return "register/step2";
-		
+		if(!regReq.isPasswordEqualToConfirmPassword()) {
+			errors.rejectValue("confirmPassword", "nomatch");
+			return "register/step2";
+		}
 		try {
 			service.regist(regReq);
 			return "register/step3";
