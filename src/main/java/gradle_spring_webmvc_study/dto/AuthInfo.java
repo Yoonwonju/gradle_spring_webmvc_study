@@ -1,4 +1,4 @@
-package gradle_spring_webmvc_study.spring;
+package gradle_spring_webmvc_study.dto;
 
 public class AuthInfo {
 	private Long id;

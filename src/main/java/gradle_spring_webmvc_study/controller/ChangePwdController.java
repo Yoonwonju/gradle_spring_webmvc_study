@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import gradle_spring_webmvc_study.dto.AuthInfo;
 import gradle_spring_webmvc_study.dto.ChangePwdCommand;
 import gradle_spring_webmvc_study.exception.WrongIdPasswordException;
 import gradle_spring_webmvc_study.service.ChangePasswordService;
-import gradle_spring_webmvc_study.spring.AuthInfo;
 
 @Controller
 @RequestMapping("/edit/changePassword")
@@ -33,7 +33,7 @@ public class ChangePwdController {
 			HttpSession session) {
 		// new ChangePwdCommandValidator(); 
 		if (errors.hasErrors())
-		return "edit/changePwdForm";
+			return "edit/changePwdForm";
 		AuthInfo authInfo = (AuthInfo) session.getAttribute("authInfo");
 		try {
 			changePasswordService.changePassword(authInfo.getEmail(), pwdCommand.getCurrentPassword(),

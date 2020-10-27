@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import gradle_spring_webmvc_study.dto.AuthInfo;
+import gradle_spring_webmvc_study.dto.LoginCommand;
 import gradle_spring_webmvc_study.exception.WrongIdPasswordException;
 import gradle_spring_webmvc_study.service.AuthService;
-import gradle_spring_webmvc_study.spring.AuthInfo;
-import gradle_spring_webmvc_study.spring.LoginCommand;
 
 @Controller
 @RequestMapping("/login")
@@ -35,7 +35,7 @@ public class LoginController {
 
 	@PostMapping
 	public String submit(@Valid LoginCommand loginCommand, Errors errors, HttpSession session, HttpServletResponse response) {
-		// @Valid로 변경
+		// ↓ @Valid로 변경
 		// new LoginCommandValidator().validate(loginCommand, errors);
 		if (errors.hasErrors())
 			return "/login/form";

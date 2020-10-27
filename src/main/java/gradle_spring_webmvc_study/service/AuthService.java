@@ -3,9 +3,9 @@ package gradle_spring_webmvc_study.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import gradle_spring_webmvc_study.dto.AuthInfo;
 import gradle_spring_webmvc_study.dto.Member;
 import gradle_spring_webmvc_study.exception.WrongIdPasswordException;
-import gradle_spring_webmvc_study.spring.AuthInfo;
 import gradle_spring_webmvc_study.spring.MemberDao;
 
 @Component
